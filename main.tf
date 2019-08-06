@@ -39,7 +39,8 @@ locals {
 }
 
 module "effortless_bootstrap_hab" {
-  source            = "/home/steveb/workspace/terraform/modules/devoptimist/terraform-chef-effortless-bootstrap"
+  source            = "devoptimist/effortless-bootstrap/chef"
+  version           = "0.0.2"
   ips               = var.ips
   instance_count    = local.instance_count
   user_name         = var.user_name

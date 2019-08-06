@@ -1,5 +1,6 @@
 # Overview
-This terraform module will deploy chef server to one or more servers
+This module will install habitat, setup a supervisor, install habitat packages, load and configure habitat services to one or more servers.
+Under the hood this module uses a Chef `Effortless Infra` package to install and setup everything. Once the native habitat provisioner for terraform supports Windows, I will switich this module to use that instead. This module supports managing habitat and its services on both Windows and Linux
 
 #### Supported platform families:
  * Debian

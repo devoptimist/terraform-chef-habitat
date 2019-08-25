@@ -228,7 +228,6 @@ variable "hab_user_toml_action" {
 
 variable "hab_services" {
   description = "A map of habitat service names and their config options"
-  type        = map
   default     = {}
 }
 

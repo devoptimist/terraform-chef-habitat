@@ -40,7 +40,7 @@ locals {
 
 module "effortless_bootstrap_hab" {
   source            = "devoptimist/effortless-bootstrap/chef"
-  version           = "0.0.2"
+  version           = "0.0.3"
   ips               = var.ips
   instance_count    = local.instance_count
   user_name         = var.user_name

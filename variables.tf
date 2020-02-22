@@ -258,7 +258,7 @@ variable "hab_config_action" {
 variable "effortless_hab_pkg" {
   description = "The effortless package used to bootstrap the full habitat setup"
   type        = string
-  default     = "devoptimist/chef_habitat_wrapper"
+  default     = "srb3/chef_habitat_wrapper"
 }
 
 variable "clear_node_data" {

@@ -1,5 +1,11 @@
 locals {
   instance_count  = var.instance_count # length(var.ips)
+  effortless_hab_config_extra = [
+    for ip in var.ips :
+    {
+      "data": var.module_input
+    }
+  ]
   effortless_hab_config = [
     for ip in var.ips :
     {
@@ -50,6 +56,7 @@ module "effortless_bootstrap_hab" {
   user_passes       = var.user_passes
   user_private_keys = var.user_private_keys
   config            = local.effortless_hab_config
+  config_extra      = local.effortless_hab_config_extra
   system_type       = var.system_type
   hab_version       = var.hab_version
   jq_windows_url    = var.jq_windows_url

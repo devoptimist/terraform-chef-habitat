@@ -266,3 +266,9 @@ variable "clear_node_data" {
   type        = bool
   default     = true
 }
+
+variable "module_input" {
+  description = "This variable is set if we need to enfroce the order in which this module is run. Use a string output of another module as the value for hook_data to ensure this module runs in order"
+  type        = string
+  default     = ""
+}

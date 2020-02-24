@@ -267,6 +267,12 @@ variable "clear_node_data" {
   default     = true
 }
 
+variable "ssl_cert_file" {
+  description = "If needed you can pass the path to an ssl cert file to use for the chef client bootstrap run"
+  type        = string
+  default     = ""
+}
+
 variable "module_input" {
   description = "This variable is set if we need to enfroce the order in which this module is run. Use a string output of another module as the value for hook_data to ensure this module runs in order"
   type        = string

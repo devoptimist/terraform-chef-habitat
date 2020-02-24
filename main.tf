@@ -46,7 +46,7 @@ locals {
 
 module "effortless_bootstrap_hab" {
   source            = "srb3/effortless-bootstrap/chef"
-  version           = "0.0.7"
+  version           = "0.0.8"
   ips               = var.ips
   instance_count    = local.instance_count
   user_name         = var.user_name
@@ -63,4 +63,5 @@ module "effortless_bootstrap_hab" {
   jq_linux_url      = var.jq_linux_url
   effortless_pkg    = var.effortless_hab_pkg
   clear_node_data   = var.clear_node_data
+  ssl_cert_file     = var.ssl_cert_file
 }

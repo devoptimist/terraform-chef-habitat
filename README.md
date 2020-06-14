@@ -14,7 +14,7 @@ Under the hood this module uses a Chef `Effortless Infra` package to install and
 
 module "chef_habitat_install" {
   source               = "devoptimist/habitat/chef"
-  version              = "0.0.1"
+  version              = "0.0.17"
   ips                  = ["172.16.0.23"]
   instance_count       = 1
   ssh_user_name        = "ec2-user"

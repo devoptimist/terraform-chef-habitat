@@ -40,7 +40,7 @@ locals {
 
 module "effortless_bootstrap_hab" {
   source            = "srb3/effortless-bootstrap/chef"
-  version           = "0.0.15"
+  version           = "0.13.0"
   ips               = var.ips
   instance_count    = local.instance_count
   user_name         = var.user_name

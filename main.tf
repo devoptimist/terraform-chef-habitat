@@ -36,7 +36,7 @@ locals {
 
 module "effortless_bootstrap_hab" {
   source            = "srb3/effortless-bootstrap/chef"
-  version           = "0.13.0"
+  version           = "0.13.1"
   ip                = var.ip
   user_name         = var.user_name
   user_pass         = var.user_pass

@@ -1,13 +1,8 @@
 ############ connection details #################
 
-variable "ips" {
-  description = "A list of ip addresses where we will install hab and run services"
-  type        = list
-}
-
-variable "instance_count" {
-  description = "The number of instances that will have chef-solo run on them"
-  type        = number
+variable "ip" {
+  description = "An ip addresse to install hab and run services"
+  type        = string
 }
 
 variable "user_name" {
@@ -16,34 +11,16 @@ variable "user_name" {
   default     = ""
 }
 
-variable "user_names" {
-  description = "A list of ssh or winrm user names used to access the ip addresses provided"
-  type        = list(string)
-  default     = []
-}
-
 variable "user_pass" {
   description = "The ssh or winrm user password used to access the ip addresses (either user_pass or user_private_key needs to be set)"
   type        = string
   default     = ""
 }
 
-variable "user_passes" {
-  description = "A list of ssh or winrm user passwords used to access the ip addresses (either user_pass or user_private_key needs to be set)"
-  type        = list(string)
-  default     = []
-}
-
 variable "user_private_key" {
   description = "The user key used to access the ip addresses (either user_pass or user_private_key needs to be set)"
   type        = string
   default     = ""
-}
-
-variable "user_private_keys" {
-  description = "A list of user keys used to access the ip addresses (either user_pass/s or user_private_key/s needs to be set)"
-  type        = list(string)
-  default     = []
 }
 
 ################# misc ############################
@@ -271,10 +248,4 @@ variable "ssl_cert_file" {
   description = "If needed you can pass the path to an ssl cert file to use for the chef client bootstrap run"
   type        = string
   default     = ""
-}
-
-variable "module_depends_on" {
-  description = "List of modules or resources this module depends on"
-  type        = list(any)
-  default     = []
 }

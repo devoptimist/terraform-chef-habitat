@@ -26,11 +26,10 @@ module "chef_habitat_install" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|----------|
-|ips|A list of ip addresses where the chef habitat will be installed and services loaded|list|[]|no|
-|instance_count|The number of instances being created|number|0|no|
-|ssh_user_name|The ssh user name used to access the ip addresses provided|string||yes|
-|ssh_user_pass|The ssh user password used to access the ip addresses (either ssh_user_pass or ssh_user_private_key needs to be set)|string|""|no|
-|ssh_user_private_key|The ssh user key used to access the ip addresses (either ssh_user_pass or ssh_user_private_key needs to be set)|string|""|no|
+|ip|An ip address where chef habitat will be installed and services loaded|list|[]|no|
+|user_name|The ssh user name used to access the ip addresses provided|string||yes|
+|user_pass|The ssh user password used to access the ip addresses (either ssh_user_pass or ssh_user_private_key needs to be set)|string|""|no|
+|user_private_key|The ssh user key used to access the ip addresses (either ssh_user_pass or ssh_user_private_key needs to be set)|string|""|no|
 |accept_license|Shall we accept the chef product license|bool|true|no|
 |install_url|The URL to that holds the habitat install script|string|https://raw.githubusercontent.com/habitat-sh/habitat/master/components/hab/install.sh|no|
 |create_hab_user|If true the hab user/group is created|bool|true|no|
